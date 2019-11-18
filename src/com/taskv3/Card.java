@@ -20,7 +20,9 @@ public class Card implements Comparable {
         if(suit < 0 || suit > 3) {
             throw new IllegalArgumentException("Invalid suit for card");
         }
-//        if(rank < 0 )
+        if(rank < 0 || rank > 13) {
+            throw new IllegalArgumentException("Invalid rank for card");
+        }
         this.rank = rank;
         this.suit = suit;
     }
